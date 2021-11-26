@@ -1,20 +1,27 @@
-// import React from 'react';
-import './App.scss';
+import React from 'react';
+import { Routes, Link, Route } from 'react-router-dom';
 
-export const App = () => (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          This works
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import './App.scss';
+import { UserInfo } from './components/UserInfo';
+import { UserList } from './components/UserList/UserList';
+
+export const App: React.FC = () => {
+
+  return (
+  <div>
+    <h1>
+      <Link to="/user">
+        UserInfo
+      </Link>
+      <Link to="/">
+        Home
+      </Link>
+    </h1>
+    
+    <Routes>
+      <Route path="/" element={<UserList />} />
+      <Route path="/user" element={<UserInfo />} />
+    </Routes>
+  </div>
   );
+}
