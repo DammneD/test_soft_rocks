@@ -1,0 +1,2 @@
+.App{text-align:center}h1{display:flex;grid-gap:10px;gap:10px}.addUserForm{flex-direction:column}.addUserForm,.users__list{display:flex;grid-gap:15px;gap:15px}.users__list{flex-wrap:wrap;list-style-type:none}.users__list,.users__list li{border:1px solid #000;padding:10px}.users__list li{margin:0 auto;width:300px}.users__list li a{display:block;margin-bottom:5px}
+/*# sourceMappingURL=main.b05a2d06.chunk.css.map */
