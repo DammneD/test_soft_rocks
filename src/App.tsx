@@ -20,9 +20,11 @@ export const App: React.FC = () => {
           getUserId={handleClick}
         />}
       />
-      <Route path={`user/${userId}`} element={<UserInfo 
-        id={userId}
-      />} />
+      <Route path={`user/${userId}`} element={
+        <UserInfo
+          id={userId}
+        />}
+      />
     </Routes>
   </div>
   );
