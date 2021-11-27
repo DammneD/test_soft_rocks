@@ -17,6 +17,10 @@
     background-color: transparent;
     box-shadow: 2px 2px 2px 1px;;
   }
+
+  &:disabled {
+    border-color: rgba(190, 190, 190, 0.15);
+  }
 }
 
 .link {
