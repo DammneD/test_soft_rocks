@@ -8,7 +8,7 @@ import { User } from './types';
 
 export const App: React.FC = () => {
   const [userId, setUserId] = useState(0);
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState({});
 
   const handleClick = (user: User) => {
     setUserId(user.id);
@@ -18,19 +18,18 @@ export const App: React.FC = () => {
   return (
   <div>
     <h1>
-
-      <Link to="">
+      <Link to="/test_soft_rocks/">
         Home
       </Link>
     </h1>
     
     <Routes>
-      <Route path="" element={
+      <Route path="/test_soft_rocks/" element={
         <UserList
           handleClick={handleClick}
         />}
       />
-      <Route path={`/user/${userId}`} element={<UserInfo 
+      <Route path={`/test_soft_rocks/user/${userId}`} element={<UserInfo 
         user={user}
       />} />
     </Routes>
