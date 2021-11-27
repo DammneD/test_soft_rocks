@@ -4,12 +4,15 @@ import { Routes, Link, Route } from 'react-router-dom';
 import './App.scss';
 import { UserInfo } from './components/UserInfo/UserInfo';
 import { UserList } from './components/UserList/UserList';
+import { User } from './types';
 
 export const App: React.FC = () => {
   const [userId, setUserId] = useState(0);
+  const [user, setUser] = useState<User | null>(null);
 
-  const handleClick = (id: number) => {
-    setUserId(id);
+  const handleClick = (user: User) => {
+    setUserId(user.id);
+    setUser(user)
   }
 
   return (
@@ -23,11 +26,13 @@ export const App: React.FC = () => {
     
     <Routes>
       <Route path="" element={
-      <UserList
-        handleClick={handleClick}
+        <UserList
+          handleClick={handleClick}
+        />}
       />
-      } />
-      <Route path={`/user/${userId}`} element={<UserInfo />} />
+      <Route path={`/user/${userId}`} element={<UserInfo 
+        user={user}
+      />} />
     </Routes>
   </div>
   );
