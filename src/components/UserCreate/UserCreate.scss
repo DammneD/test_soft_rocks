@@ -1,0 +1,46 @@
+.creationForm {
+  &__wrap {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__field {
+    border: none;
+    border-bottom: 1px solid gray;
+    height: 20px;
+    width: 200px;
+
+    &:hover::placeholder {
+      transition: text-indent ease-in-out 0.8s;
+      text-indent: 500px;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__button {
+    align-self: center;
+  }
+}
+
+.active {
+  border-bottom: 1px solid red;
+  box-shadow: 0 0 1px 0 red;
+
+  &::placeholder {
+    color: red;
+  }
+}

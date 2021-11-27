@@ -1,0 +1,49 @@
+.users {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 0;
+    gap: 15px;
+    list-style-type: none;
+
+    &_item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: sans-serif;
+      max-width: 600px;
+      background-color: rgba(210, 255, 255, 0.15);
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 10px;
+      transition: background-color ease-in 0.3s, box-shadow ease-in 0.3s;
+
+      &:hover {
+        background-color: rgba(210, 255, 255, 0.3);
+        box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &_title {
+      margin: 0 0 10px;
+    }
+
+    &_mail {
+      margin: 0;
+    }
+  }
+
+  &__button-block {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__info-button {
+    color: black;
+  }
+
+  &__delete-button {
+    background-color: rgb(250, 200, 200);
+  }
+}
