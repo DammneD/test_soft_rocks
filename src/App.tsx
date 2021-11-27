@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Link, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import './App.scss';
 import { UserInfo } from './components/UserInfo/UserInfo';
@@ -15,12 +15,12 @@ export const App: React.FC = () => {
   return (
   <div>
     <Routes>
-      <Route path="/test_soft_rocks/" element={
+      <Route path="/" element={
         <UserList
           getUserId={handleClick}
         />}
       />
-      <Route path={`/test_soft_rocks/user/${userId}`} element={<UserInfo 
+      <Route path={`user/${userId}`} element={<UserInfo 
         id={userId}
       />} />
     </Routes>

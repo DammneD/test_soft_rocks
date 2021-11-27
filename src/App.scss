@@ -1,8 +1,24 @@
-.App {
-  text-align: center;
+.button {
+  box-sizing: border-box;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 110px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(250, 250, 250);
+  cursor: pointer;
+  transition: box-shadow ease-in 0.3s, background-color 0.3s;
+
+  &:hover {
+    background-color: transparent;
+    box-shadow: 2px 2px 2px 1px;;
+  }
 }
 
-h1 {
-  display: flex;
-  gap: 10px;
+.link {
+  text-decoration: none;
 }
