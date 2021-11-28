@@ -84,6 +84,7 @@ export const UserInfo: React.FC<Props> = ({ id }) => {
 
     if (isUpdateFromApi) {
       updateUser({ id, ...temp });
+      setisReturnButtodDisabled(true)
     }
   }
 
