@@ -77,7 +77,7 @@ export const UserCreate: React.FC<Props> = ({ getUsers }) => {
               className="creationForm__field"
               placeholder="myMail@mail.com"
               id="newEmail"
-              type="text"
+              type="email"
               value={email}
               onChange={(event) => setMail(event.target.value)}
             />

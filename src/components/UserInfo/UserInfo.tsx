@@ -147,7 +147,7 @@ export const UserInfo: React.FC<Props> = ({ id }) => {
           id="email"
           disabled={isDisabled.email}
           name="email"
-          type="text"
+          type="email"
           value={user.email}
           onChange={handleChange}
         />
@@ -167,7 +167,7 @@ export const UserInfo: React.FC<Props> = ({ id }) => {
           id="phone"
           disabled={isDisabled.phone}
           name="phone"
-          type="text"
+          type="tel"
           value={user.phone}
           onChange={handleChange}
         />
